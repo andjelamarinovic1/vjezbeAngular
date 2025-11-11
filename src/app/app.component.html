@@ -1,0 +1,8 @@
+<h1 *ngIf="!isLoggedIn">Korisnik {{name}} nije ulogovan</h1>
+<h1 *ngIf="isLoggedIn">Korisnik {{name}} je ulogovan</h1>
+
+<h2 *ngFor="let pr of products">{{pr.name}} {{pr.price}} <span *ngIf="pr.sale"> % </span></h2>
+
+<button type="button"  (click)="myFunc()" *ngIf="counter<10" > Vrijednost je {{counter}} </button>
+
+<span *ngFor="let i of category" (click)="selectCategory(i)"> <b> {{i.type}} </b> <label *ngIf="i.selected">{{i.description}}</label> </span>
